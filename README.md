@@ -1,44 +1,43 @@
-# 🚀 Detección de Cajas y Bolsas con YOLO y Transfer Learning 🚀
+# 🚀 Box and Bag Detection with YOLO and Transfer Learning 🚀
 
-En este proyecto, he utilizado **transfer learning** para entrenar un modelo **YOLO**, adaptándolo para detectar cajas y bolsas de manera más efectiva ya que ví que el tipo de cajas que se encontraban en las imagenes, no se detectaban bien con estos modelos.
-
----
-
-## 💡 Mi Enfoque en el Entrenamiento
-
-Para el entrenamiento del modelo, me basé en dos de las tres imágenes que me fueron proporcionadas. Dado el escaso número de ejemplos, decidí **ampliar el dataset** creando fondos artificiales, realizando rotaciones y perturbando las imágenes. El objetivo fue hacer el modelo más **robusto** y capaz de enfrentar diferentes situaciones.
-Por otro lado, debido a que tengo una GTX 1050TI, he reducido el tamaño de las imagenes a 640x640 debido a que si lo dejaba como se nos fueron proporcionadas las imágenes, a lo mejor mi gráfica explota.
+In this project, I've used **transfer learning** to train a **YOLO** model, adapting it to more effectively detect boxes and bags. I noticed that the specific types of boxes in the provided images weren't being detected well by off-the-shelf models, so I focused on refining that.
 
 ---
 
-## 👀 Evaluación del Modelo
+## 💡 My Training Approach
 
-Utilicé la última imagen como una forma de evaluar el modelo, sin embargo, si lo quieren probar ustedes mismos, dejo un código en el repositorio el cual se llama probando_modelo.py. Aquí te muestro el resultado:
+For training the model, I used two of the three images provided to me. Given the small number of examples, I decided to **expand the dataset** by creating artificial backgrounds, performing rotations, and perturbing the images. The goal was to make the model more **robust** and capable of handling different scenarios.
 
-Como pueden ver, se detectan **casi todas las cajas y bolsas**.
+Additionally, since I'm working with a **GTX 1050TI**, I reduced the image size to **640x640**. Leaving them at their original resolution might have, well, pushed my GPU a bit too hard!
+
+---
+
+## 👀 Model Evaluation
+
+I used the last image as a way to evaluate the model. However, if you'd like to test it yourself, I've included a script in the repository called `probando_modelo.py`. Here's a look at the results:
+
+As you can see, **almost all boxes and bags are detected**.
 
 <img width="970" height="972" alt="image" src="https://github.com/user-attachments/assets/d08e9896-34a0-4e71-be2d-0955de32cb2f" />
 
+---
 
+## 🎯 Ideas for Improvement
+
+A possible improvement would be to detect the **top face of the box or bag**. With some **linear algebra**, the **normal vector of the plane** formed by that face could be calculated, which would indicate the most favorable direction for a "pick" action.
 
 ---
 
-## 🎯 Ideas para Mejorar
+## 🌱 My Journey and Future Projections
 
-Una mejora posible sería detectar la **cara superior de la caja o bolsa**. Con algo de **álgebra lineal**, se podría calcular la **normal del plano** que forma esa cara, lo que indicaría la dirección más favorable para realizar el "pick".
+I know that my current solution doesn't fully cover the problem, as I haven't had the opportunity to advance as quickly on my own due to my current internship. Furthermore, I haven't finished my degree yet; I'm about to start my final year, where I'll be studying **perception systems**. To add to that, this year my Final Degree Project (TFG) is on cone detection with a stereo camera for the Formula Student AI competition, which focuses on autonomous driving. In October, I'll also be taking a **deep learning** course offered by **Deep Learning Institute of Nvidia** to enhance my knowledge, as everything I've shown here comes from a **machine learning** extracurricular course I took last academic year.
 
----
-
-## 🌱 Mi Trayectoria y Proyecciones Futuras
-
-Sé que mi solución actual no abarca completamente el problema ya que no he tenido la oportunidad de avanzar por mi cuenta tan rápido debido a que estoy realizando mis prácticas actualmente. Por otro lado, aún no he terminado la carrera; estoy a punto de empezar mi último año, donde veré temas de **sistemas de percepción** y para añadir, este año tengo asignado el TFG de la detección de conos con una cámara stereo para la competición de Formula Student AI, en donde la temática es la conducción autónoma. Además, en octubre, realizaré un curso de **deep learning** ofertado por el **Deep Learning Institute de Nvidia** para mejorar mis conocimientos, ya que todo lo que he mostrado aquí proviene de un curso de **machine learning** que hice el año pasado.
-
-Al ver los problemas que se presentaban, me di cuenta de todo lo que me queda por aprender. Por ello, me gustaría que me tuvieran en cuenta para **futuras posiciones o incluso para prácticas**. A pesar de ser de Málaga, estoy dispuesto a **moverme a Barcelona** una vez que acabe la carrera para la realización de las mismas.
+Seeing the problems presented made me realize how much more I have to learn. Therefore, I'd appreciate it if you'd consider me for **future positions or even internships**. Despite being from Málaga, I'm willing to **relocate to Barcelona** once I finish my degree to pursue these opportunities.
 
 ---
 
-## Por último
+## Finally
 
-De todas maneras, ¿sería posible conocer las soluciones de los participantes? A pesar de no poder aportar demasiado en las soluciones, me gustaría aprender del resto de la gente. O incluso si ustedes tienen la respuesta a los problemas.
+By the way, would it be possible to know the solutions of the other participants? Even though I might not be able to contribute much to the solutions right now, I'd love to learn from others. Or, if you have the answers to the problems, that would be great too!
 
-¡Muchas gracias!
+Thank you very much!
