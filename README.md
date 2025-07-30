@@ -8,7 +8,7 @@ In this project, I've used **transfer learning** to train a **YOLO** model, adap
 
 For training the model, I used two of the three images provided to me. Given the small number of examples, I decided to **expand the dataset** by creating artificial backgrounds, performing rotations, and perturbing the images. The goal was to make the model more **robust** and capable of handling different scenarios.
 
-Additionally, since I'm working with a **GTX 1050TI**, I reduced the image size to **640x640**. Leaving them at their original resolution might have, well, pushed my GPU a bit too hard!
+Additionally, since I'm working with a **GTX 1050TI**, I reduced the image size to **640x640**. Leaving them at their original resolution might have, well, pushed my GPU a bit too hard! (maybe even explode)
 
 ---
 
