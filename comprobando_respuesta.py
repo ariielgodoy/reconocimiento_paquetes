@@ -6,7 +6,7 @@ def read_annotations(txt_file):
     with open(txt_file, 'r') as f:
         for line in f.readlines():
             parts = line.strip().split()
-            class_id = int(parts[0])  # Clase (0 para cajas, 2 para flechas, etc.)
+            class_id = float(parts[0])  # Clase (0 para cajas, 2 para flechas, etc.)
             x_center = float(parts[1])
             y_center = float(parts[2])
             w = float(parts[3])
@@ -31,8 +31,8 @@ def draw_arrow(image, x_center, y_center, w, h, color=(0, 0, 255), thickness=2):
     return image
 
 # Carpeta de entrada (imágenes)
-input_image_path = r"C:\Users\emc\Desktop\ariel\challenge\imagenes_redimensionadas\IMG_9104_640.jpg"
-txt_file_path = r"C:\Users\emc\Desktop\ariel\challenge\imagenes_redimensionadas\IMG_9104_640.txt"
+input_image_path = r"/home/ariel/github_repos/reconocimiento_paquetes/imagenes_aumentadas/IMG_9102_640_aug_bg21.jpg"
+txt_file_path = r"/home/ariel/github_repos/reconocimiento_paquetes/labels_aumentadas/IMG_9102_640_aug_bg21.txt"
 
 # Cargar imagen
 image = cv2.imread(input_image_path)
@@ -45,7 +45,7 @@ for box in boxes:
     class_id, x_center, y_center, w, h = box
 
     # Si es una caja, dibujarla
-    if class_id == 0 or 1:
+    if class_id == 0.0 or 1.0:
         image = draw_box(image, x_center, y_center, w, h)
     
     # Si es una flecha (class_id == 2), dibujar la flecha

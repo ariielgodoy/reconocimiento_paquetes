@@ -1,7 +1,0 @@
-0 0.236 0.778 0.202 0.276 # Caja marrón inferior derecha (reduce CO2)
-0 0.499 0.578 0.223 0.254 # Caja marrón clara en el centro
-1 0.273 0.777 0.299 0.265 # Bolsa blanca inferior izquierda
-1 0.741 0.765 0.281 0.282 # Bolsa blanca inferior derecha
-1 0.734 0.475 0.363 0.325 # Bolsa marrón H&M
-1 0.234 0.518 0.306 0.315 # Bolsa blanca izquierda
-1 0.467 0.304 0.371 0.263 # Bolsa blanca superior central

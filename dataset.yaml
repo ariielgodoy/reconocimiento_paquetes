@@ -1,0 +1,5 @@
+train: /home/ariel/github_repos/reconocimiento_paquetes/dataset/images/train
+val: /home/ariel/github_repos/reconocimiento_paquetes/dataset/images/val
+
+nc: 2   # número de clases (ajusta a las tuyas)
+names: ['caja', 'bolsa']  # nombres de tus clases

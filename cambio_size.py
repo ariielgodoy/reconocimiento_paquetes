@@ -2,8 +2,8 @@ import cv2
 import os
 
 # Carpetas
-input_folder = "C:/Users/emc/Desktop/ariel/challenge/Coding-challenge/coding-challenge/3_normal_picking_angle"
-output_folder = "C:/Users/emc/Desktop/ariel/challenge/imagenes_redimensionadas"
+input_folder = "/home/ariel/github_repos/reconocimiento_paquetes/Coding-challenge/coding-challenge/3_normal_picking_angle"
+output_folder = "/home/ariel/github_repos/reconocimiento_paquetes/imagenes_redimensionadas"
 os.makedirs(output_folder, exist_ok=True)
 
 # Tamaño objetivo
