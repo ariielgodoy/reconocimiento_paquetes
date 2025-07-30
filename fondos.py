@@ -6,7 +6,7 @@ import random
 output_folder = "/home/ariel/github_repos/reconocimiento_paquetes/fondos"
 os.makedirs(output_folder, exist_ok=True)
 
-num_fondos = 30  # Puedes cambiar esto
+num_fondos = 30
 
 def generar_fondo_artificial(width=640, height=480):
     tipo = random.choice(['color', 'gradiente', 'ruido', 'rayas'])
@@ -31,7 +31,7 @@ def generar_fondo_artificial(width=640, height=480):
 
     return fondo
 
-# Generar y guardar
+
 for i in range(num_fondos):
     fondo = generar_fondo_artificial()
     cv2.imwrite(os.path.join(output_folder, f"fondo_{i:02d}.jpg"), fondo)
