@@ -1,7 +1,7 @@
 import cv2
 from ultralytics import YOLO
 
-model_path = '/home/ariel/runs/detect/train2/weights/best.pt'
+model_path = '/home/ariel/github_repos/reconocimiento_paquetes/modelo_transfer_learning/best.pt'
 model = YOLO(model_path)
 conf_threshold = 0.7
 
@@ -32,14 +32,14 @@ for box, conf, cls_id in zip(boxes, confidences, class_ids):
     cv2.putText(img, label, (x1, y1 - 10),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
-# Escalar imagen para mostrarla más grande, ejemplo 3x
-scale_percent = 300  # porcentaje de escala
+
+scale_percent = 300 
 width = int(img.shape[1] * scale_percent / 100)
 height = int(img.shape[0] * scale_percent / 100)
 dim = (width, height)
 img_resized = cv2.resize(img, dim, interpolation=cv2.INTER_LINEAR)
 
-# Crear ventana redimensionable y mostrar imagen
+
 cv2.namedWindow('Detección YOLO', cv2.WINDOW_NORMAL)
 cv2.imshow('Detección YOLO', img_resized)
 cv2.waitKey(0)
